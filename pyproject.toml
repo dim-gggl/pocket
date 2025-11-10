@@ -1,10 +1,91 @@
 [project]
-name = "fancy-tools"
+name = "pocket"
 version = "0.1.0"
-description = "Add your description here"
+description = "A collection of developer productivity tools including markdown rendering, project exporters, agent templates, and cheatsheets management."
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
+authors = [
+    {name = "dim-gggl"}
+]
+keywords = ["developer-tools", "cli", "markdown", "productivity", "agents", "templates"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
 dependencies = [
     "click>=8.3.0",
+    "coverage>=7.11.3",
+    "pytest>=9.0.0",
     "rich>=14.1.0",
+    "sphinx>=8.2.3",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+pdf = [
+    "fpdf2>=2.7.0",
+    "markdown-pdf>=1.0.0",
+]
+web = [
+    "Pillow>=10.0.0",
+]
+all = [
+    "fpdf2>=2.7.0",
+    "markdown-pdf>=1.0.0",
+    "Pillow>=10.0.0",
+]
+
+[project.scripts]
+pocket = "fancy_tools.cli:main"
+markd = "fancy_tools.markdown.renderer:markd"
+project to-file = "fancy_tools.project.to_file:main"
+conv-to-pdf = "fancy_tools.pdf.converter:main"
+flavicon = "fancy_tools.web.favicon:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --cov=fancy_tools --cov-report=term-missing --cov-report=html"
+
+[tool.coverage.run]
+source = ["fancy_tools"]
+omit = [
+    "*/tests/*",
+    "*/__init__.py",
+    "*/cli.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
