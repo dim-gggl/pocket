@@ -160,7 +160,7 @@ pocket project to-file -o archives/project-v1.0.0.md
 ### Basic Usage
 
 ```python
-from fancy_tools.project.to_file import create_codebase_markdown
+from pocket.project.to_file import create_codebase_markdown
 
 create_codebase_markdown(
     project_path="./my-project",
@@ -172,7 +172,7 @@ create_codebase_markdown(
 ### Custom Language Detection
 
 ```python
-from fancy_tools.project.to_file import get_language_identifier
+from pocket.project.to_file import get_language_identifier
 
 lang = get_language_identifier("app.py")  # Returns: "python"
 ```
@@ -180,7 +180,7 @@ lang = get_language_identifier("app.py")  # Returns: "python"
 ### Generate Tree Only
 
 ```python
-from fancy_tools.project.to_file import generate_tree
+from pocket.project.to_file import generate_tree
 
 for line in generate_tree("/path/to/project", {"node_modules", ".git"}):
     print(line)

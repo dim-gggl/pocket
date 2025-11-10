@@ -8,7 +8,7 @@ from pathlib import Path
 
 def test_web_module_imports():
     """Test that web module can be imported."""
-    from fancy_tools.web import convert_to_favicon, DEFAULT_FAVICON_SIZES
+    from pocket.web import convert_to_favicon, DEFAULT_FAVICON_SIZES
 
     assert callable(convert_to_favicon)
     assert isinstance(DEFAULT_FAVICON_SIZES, list)
@@ -17,7 +17,7 @@ def test_web_module_imports():
 
 def test_favicon_default_sizes():
     """Test that default favicon sizes are correct."""
-    from fancy_tools.web import DEFAULT_FAVICON_SIZES
+    from pocket.web import DEFAULT_FAVICON_SIZES
 
     expected_sizes = [
         (256, 256),
@@ -33,7 +33,7 @@ def test_favicon_default_sizes():
 
 def test_favicon_converter_file_not_found(temp_dir):
     """Test that converter raises FileNotFoundError for non-existent files."""
-    from fancy_tools.web.favicon import convert_to_favicon
+    from pocket.web.favicon import convert_to_favicon
 
     input_file = temp_dir / "nonexistent.png"
     output_file = temp_dir / "favicon.ico"
@@ -44,7 +44,7 @@ def test_favicon_converter_file_not_found(temp_dir):
 
 def test_favicon_converter_invalid_output_extension(temp_dir):
     """Test that converter raises ValueError for non-.ico output."""
-    from fancy_tools.web.favicon import convert_to_favicon
+    from pocket.web.favicon import convert_to_favicon
 
     # Create a dummy input file
     input_file = temp_dir / "test.png"

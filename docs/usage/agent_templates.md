@@ -259,7 +259,7 @@ pocket markdown render /tmp/sql.md
 ### Programmatic Access
 
 ```python
-from fancy_tools.templates_and_cheatsheets import TEMPLATES_DIR, CHEATSHEETS_DIR
+from pocket.templates_and_cheatsheets import TEMPLATES_DIR, CHEATSHEETS_DIR
 
 # List templates
 templates = list(TEMPLATES_DIR.glob("*.md"))
@@ -274,7 +274,7 @@ content = template_path.read_text(encoding='utf-8')
 
 ```python
 from pathlib import Path
-from fancy_tools.templates_and_cheatsheets.validator import validate_template_file
+from pocket.templates_and_cheatsheets.validator import validate_template_file
 
 # Validate a template
 template_path = Path(".agents/custom_agent.md")
@@ -313,7 +313,7 @@ Practical examples
 ### Validation
 
 ```python
-from fancy_tools.templates_and_cheatsheets.validator import validate_template_file
+from pocket.templates_and_cheatsheets.validator import validate_template_file
 
 validate_template_file(Path("my-template.md"))
 ```
@@ -324,7 +324,7 @@ validate_template_file(Path("my-template.md"))
 
 Located in the package:
 ```
-fancy_tools/templates_and_cheatsheets/
+pocket/templates_and_cheatsheets/
 ├── templates/
 │   ├── agent_maker.md
 │   ├── unit_tests_agent.md

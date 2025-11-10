@@ -8,7 +8,7 @@ from pathlib import Path
 
 def test_pdf_module_imports():
     """Test that PDF module can be imported."""
-    from fancy_tools.pdf import convert_to_pdf, convert_txt_to_pdf, convert_md_to_pdf
+    from pocket.pdf import convert_to_pdf, convert_txt_to_pdf, convert_md_to_pdf
 
     assert callable(convert_to_pdf)
     assert callable(convert_txt_to_pdf)
@@ -17,7 +17,7 @@ def test_pdf_module_imports():
 
 def test_pdf_converter_file_not_found(temp_dir):
     """Test that converter raises FileNotFoundError for non-existent files."""
-    from fancy_tools.pdf.converter import convert_to_pdf
+    from pocket.pdf.converter import convert_to_pdf
 
     input_file = temp_dir / "nonexistent.txt"
     output_file = temp_dir / "output.pdf"
@@ -28,7 +28,7 @@ def test_pdf_converter_file_not_found(temp_dir):
 
 def test_pdf_converter_unsupported_extension(temp_dir):
     """Test that converter raises ValueError for unsupported file types."""
-    from fancy_tools.pdf.converter import convert_to_pdf
+    from pocket.pdf.converter import convert_to_pdf
 
     # Create a file with unsupported extension
     input_file = temp_dir / "test.xyz"

@@ -4,7 +4,7 @@ Cette page decrit comment executer et superviser la suite de tests de Fancy Tool
 
 ## Vue d ensemble
 
-La suite couvre tous les modules publics du paquet `fancy_tools` et s appuie sur Pytest ainsi que pytest-cov pour la couverture. Les tests se trouvent dans le dossier `tests/` et reproduisent la structure du code source.
+La suite couvre tous les modules publics du paquet `pocket` et s appuie sur Pytest ainsi que pytest-cov pour la couverture. Les tests se trouvent dans le dossier `tests/` et reproduisent la structure du code source.
 
 ## Preparation
 
@@ -39,13 +39,13 @@ pytest tests/unit_tests/test_markdown/test_renderer.py::test_read_markdown_file_
 
 ```bash
 # Rapport terminal
-pytest tests/ --cov=fancy_tools --cov-report=term-missing
+pytest tests/ --cov=pocket --cov-report=term-missing
 
 # Rapport HTML
-pytest tests/ --cov=fancy_tools --cov-report=html
+pytest tests/ --cov=pocket --cov-report=html
 
 # Deux formats en meme temps
-pytest tests/ --cov=fancy_tools --cov-report=term-missing --cov-report=html
+pytest tests/ --cov=pocket --cov-report=term-missing --cov-report=html
 ```
 
 Les rapports HTML sont generes dans `htmlcov/`. Ouvrir `htmlcov/index.html` dans un navigateur pour une analyse detaillee.
@@ -53,11 +53,11 @@ Les rapports HTML sont generes dans `htmlcov/`. Ouvrir `htmlcov/index.html` dans
 ## Resultats actuels
 
 - Couverture globale : **72 %**
-- `fancy_tools.markdown.renderer` : 71 %
-- `fancy_tools.pdf.converter` : 54 % (dependances optionnelles requises pour des scenarios complets)
-- `fancy_tools.project.to_file` : 77 %
-- `fancy_tools.templates_and_cheatsheets.validator` : 90 %
-- `fancy_tools.web.favicon` : 71 %
+- `pocket.markdown.renderer` : 71 %
+- `pocket.pdf.converter` : 54 % (dependances optionnelles requises pour des scenarios complets)
+- `pocket.project.to_file` : 77 %
+- `pocket.templates_and_cheatsheets.validator` : 90 %
+- `pocket.web.favicon` : 71 %
 
 ## Fixtures principales
 

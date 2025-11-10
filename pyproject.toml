@@ -1,6 +1,6 @@
 [project]
 name = "pocket"
-version = "0.1.0"
+version = "1.0"
 description = "A collection of developer productivity tools including markdown rendering, project exporters, agent templates, and cheatsheets management."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -44,11 +44,11 @@ all = [
 ]
 
 [project.scripts]
-pocket = "fancy_tools.cli:main"
-markd = "fancy_tools.markdown.renderer:markd"
-project to-file = "fancy_tools.project.to_file:main"
-conv-to-pdf = "fancy_tools.pdf.converter:main"
-flavicon = "fancy_tools.web.favicon:main"
+pocket = "pocket.cli:main"
+markd = "pocket.markdown.renderer:markd"
+'project to-file' = "pocket.project.to_file:main"
+conv-to-pdf = "pocket.pdf.converter:main"
+flavicon = "pocket.web.favicon:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -58,10 +58,10 @@ build-backend = "hatchling.build"
 testpaths = ["tests"]
 python_files = "test_*.py"
 python_functions = "test_*"
-addopts = "-v --cov=fancy_tools --cov-report=term-missing --cov-report=html"
+addopts = "-v --cov=pocket --cov-report=term-missing --cov-report=html"
 
 [tool.coverage.run]
-source = ["fancy_tools"]
+source = ["pocket"]
 omit = [
     "*/tests/*",
     "*/__init__.py",
@@ -79,7 +79,7 @@ exclude_lines = [
 ]
 
 [tool.ruff]
-line-length = 100
+line-length = 79
 target-version = "py311"
 
 [tool.ruff.lint]
@@ -87,5 +87,5 @@ select = ["E", "F", "I", "N", "W"]
 ignore = ["E501"]
 
 [tool.black]
-line-length = 100
+line-length = 79
 target-version = ["py311"]

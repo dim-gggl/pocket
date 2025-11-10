@@ -17,7 +17,7 @@ A collection of developer productivity tools including markdown rendering, proje
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd Fancy_Tools
+cd pocket
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -149,9 +149,9 @@ pocket templates init -o ./my-agents/
 ## Project Structure
 
 ```
-Fancy_Tools/
+pocket/
 ├── .AGENTS/                     # Agent configurations for this project
-├── fancy_tools/                 # Main package
+├── pocket/                 # Main package
 │   ├── markdown/                # Markdown rendering tools
 │   ├── project/                 # Project export tools
 │   ├── pdf/                     # PDF conversion (coming soon)
@@ -186,7 +186,7 @@ Fancy_Tools/
 pytest
 
 # Run with coverage
-pytest --cov=fancy_tools --cov-report=html
+pytest --cov=pocket --cov-report=html
 
 # Run specific test file
 pytest tests/unit_tests/test_markdown/test_renderer.py
@@ -196,26 +196,26 @@ pytest tests/unit_tests/test_markdown/test_renderer.py
 
 ```bash
 # Format code with black
-black fancy_tools tests
+black pocket tests
 
 # Lint with ruff
-ruff check fancy_tools tests
+ruff check pocket tests
 
 # Type checking (if using mypy)
-mypy fancy_tools
+mypy pocket
 ```
 
 ### Adding New Tools
 
-1. Create a new module in `fancy_tools/`
+1. Create a new module in `pocket/`
 2. Implement functionality with proper type hints and docstrings
-3. Add CLI commands to `fancy_tools/cli.py`
+3. Add CLI commands to `pocket/cli.py`
 4. Create tests in `tests/unit_tests/`
 5. Update this README
 
 ### Adding Templates or Cheatsheets
 
-1. Add `.md` files to `fancy_tools/templates_and_cheatsheets/templates/` or `cheatsheets/`
+1. Add `.md` files to `pocket/templates_and_cheatsheets/templates/` or `cheatsheets/`
 2. Ensure proper markdown formatting
 3. Test with `pocket templates view <name>`
 

@@ -9,7 +9,7 @@ functionality, organized into logical subcommands.
 import click
 from rich.console import Console
 
-from fancy_tools import __version__
+from pocket import __version__
 
 console = Console()
 
@@ -60,7 +60,7 @@ def markdown_render(file: str, width: int):
         pocket markdown render README.md
         pocket markdown render docs/guide.md -w 100
     """
-    from fancy_tools.markdown.renderer import markd
+    from pocket.markdown.renderer import markd
     from pathlib import Path
 
     # Call the markd function with the file
@@ -109,7 +109,7 @@ def project_to_file(path: str, output: str, exclude: str):
         pocket project to-file -p ./my-project -o export.md
         pocket project to-file -e "node_modules,dist,build"
     """
-    from fancy_tools.project.to_file import create_codebase_markdown
+    from pocket.project.to_file import create_codebase_markdown
 
     create_codebase_markdown(path, output, exclude)
 
@@ -143,7 +143,7 @@ def templates_list(type: str):
         pocket templates list --type templates
         pocket templates list -t cheatsheets
     """
-    from fancy_tools.templates_and_cheatsheets.cli import list_items
+    from pocket.templates_and_cheatsheets.cli import list_items
 
     ctx = click.Context(list_items)
     ctx.invoke(list_items, type=type)
@@ -171,7 +171,7 @@ def templates_view(name: str, type: str):
         pocket templates view unit_tests_agent
         pocket templates view SQL -t cheatsheet
     """
-    from fancy_tools.templates_and_cheatsheets.cli import view_item
+    from pocket.templates_and_cheatsheets.cli import view_item
 
     ctx = click.Context(view_item)
     ctx.invoke(view_item, name=name, type=type)
@@ -211,7 +211,7 @@ def templates_copy(name: str, output: str, type: str, force: bool):
         pocket templates copy unit_tests_agent -o .agents/
         pocket templates copy SQL -o docs/cheatsheets/
     """
-    from fancy_tools.templates_and_cheatsheets.cli import copy_item
+    from pocket.templates_and_cheatsheets.cli import copy_item
     from pathlib import Path
 
     output_path = Path(output) if output else None
@@ -240,7 +240,7 @@ def templates_init(output: str):
         pocket templates init
         pocket templates init -o ./agents/
     """
-    from fancy_tools.templates_and_cheatsheets.cli import init_agents
+    from pocket.templates_and_cheatsheets.cli import init_agents
     from pathlib import Path
 
     output_path = Path(output) if output else Path.cwd() / ".AGENTS"
@@ -278,7 +278,7 @@ def pdf_convert_cmd(input_file: str, output: str):
         pocket pdf convert document.txt
         pocket pdf convert README.md -o output.pdf
     """
-    from fancy_tools.pdf.converter import pdf_convert
+    from pocket.pdf.converter import pdf_convert
     from pathlib import Path
 
     output_path = Path(output) if output else None
@@ -323,7 +323,7 @@ def web_favicon_cmd(input_file: str, output: str, sizes: str):
         pocket web favicon logo.png -o custom-favicon.ico
         pocket web favicon logo.png --sizes "64x64,32x32"
     """
-    from fancy_tools.web.favicon import favicon_convert
+    from pocket.web.favicon import favicon_convert
     from pathlib import Path
 
     output_path = Path(output) if output else None

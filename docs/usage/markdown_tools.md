@@ -38,7 +38,7 @@ markd README.md
 
 ```python
 from pathlib import Path
-from fancy_tools.markdown.renderer import read_markdown_file
+from pocket.markdown.renderer import read_markdown_file
 
 file_path = Path("README.md")
 content = read_markdown_file(file_path)
@@ -47,7 +47,7 @@ content = read_markdown_file(file_path)
 ### Rendering Markdown
 
 ```python
-from fancy_tools.markdown.renderer import render_markdown
+from pocket.markdown.renderer import render_markdown
 from rich.console import Console
 
 console = Console()

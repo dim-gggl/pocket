@@ -4,7 +4,7 @@ Tests for markdown renderer module.
 
 import pytest
 from pathlib import Path
-from fancy_tools.markdown.renderer import read_markdown_file, render_markdown
+from pocket.markdown.renderer import read_markdown_file, render_markdown
 from rich.console import Console
 
 

@@ -49,13 +49,13 @@ pytest tests/unit_tests/test_markdown/test_renderer.py::test_read_markdown_file_
 
 ```bash
 # Run tests with coverage report (terminal)
-pytest tests/ --cov=fancy_tools --cov-report=term-missing
+pytest tests/ --cov=pocket --cov-report=term-missing
 
 # Run tests with coverage report (HTML)
-pytest tests/ --cov=fancy_tools --cov-report=html
+pytest tests/ --cov=pocket --cov-report=html
 
 # Run tests with both terminal and HTML reports
-pytest tests/ --cov=fancy_tools --cov-report=term-missing --cov-report=html
+pytest tests/ --cov=pocket --cov-report=term-missing --cov-report=html
 ```
 
 The HTML coverage report will be generated in the `htmlcov/` directory. Open `htmlcov/index.html` in a browser to view the detailed coverage report.
@@ -67,7 +67,7 @@ The HTML coverage report will be generated in the `htmlcov/` directory. Open `ht
 uv run pytest tests/
 
 # Run tests with coverage
-uv run pytest tests/ --cov=fancy_tools --cov-report=html
+uv run pytest tests/ --cov=pocket --cov-report=html
 ```
 
 ## Current Test Coverage
@@ -126,7 +126,7 @@ Tests for example module.
 
 import pytest
 from pathlib import Path
-from fancy_tools.example import example_function
+from pocket.example import example_function
 
 
 def test_example_function_success():
@@ -161,7 +161,7 @@ pytest -v
 
 ```bash
 # Generate coverage report
-pytest --cov=fancy_tools --cov-report=term-missing
+pytest --cov=pocket --cov-report=term-missing
 
 # Review uncovered lines
 # Ensure gaps are acceptable (error handling, defensive code, etc.)
@@ -216,7 +216,7 @@ Tests should be run automatically in CI/CD pipelines. The test suite is designed
 ### Import Errors
 
 1. Ensure package is installed in development mode: `uv sync`
-2. Check that `fancy_tools` is in Python path
+2. Check that `pocket` is in Python path
 3. Verify `__init__.py` files exist in all package directories
 
 ## Notes
