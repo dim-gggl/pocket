@@ -1,4 +1,4 @@
-s[project]
+[project]
 name = "pocket"
 version = "1.0.1"
 description = "A collection of developer tools including markdown rendering, project exporters, agent templates, and cheatsheets management."
