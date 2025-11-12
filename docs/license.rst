@@ -1,7 +1,7 @@
 License
 =======
 
-Pocket License Information
+Super Pocket License Information
 
 MIT License
 -----------
@@ -34,7 +34,7 @@ The MIT License is a permissive open-source license that allows you to:
 Permitted
 ~~~~~~~~~
 
-* ✓ **Commercial Use** - Use Pocket in commercial projects
+* ✓ **Commercial Use** - Use Super Pocket in commercial projects
 * ✓ **Modification** - Modify the source code
 * ✓ **Distribution** - Distribute the software
 * ✓ **Private Use** - Use the software privately
@@ -55,7 +55,7 @@ Limitations
 Third-Party Licenses
 --------------------
 
-Pocket uses several third-party libraries, each with their own licenses:
+Super Pocket uses several third-party libraries, each with their own licenses:
 
 Core Dependencies
 ~~~~~~~~~~~~~~~~~
@@ -150,7 +150,7 @@ All dependencies use licenses compatible with the MIT License:
 Trademark
 ---------
 
-"Pocket" and the Pocket logo (if any) are trademarks of Dimitri Gaggioli.
+"Super Pocket" and the Super Pocket logo (if any) are trademarks of Dimitri Gaggioli.
 
 You may not use these trademarks without permission, except as necessary
 to describe the software or comply with the MIT License.
@@ -158,14 +158,14 @@ to describe the software or comply with the MIT License.
 Attribution
 -----------
 
-When using or distributing Pocket, please include attribution:
+When using or distributing Super Pocket, please include attribution:
 
 Minimal Attribution
 ~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: text
 
-   This software uses Pocket (https://github.com/dim-gggl/pocket)
+   This software uses Super Pocket (https://github.com/dim-gggl/super-pocket)
    Copyright © 2025 Dimitri Gaggioli, MIT License
 
 Recommended Attribution
@@ -173,24 +173,24 @@ Recommended Attribution
 
 .. code-block:: text
 
-   Powered by Pocket - Developer Productivity Tools
-   https://github.com/dim-gggl/pocket
+   Powered by Super Pocket - Developer Productivity Tools
+   https://github.com/dim-gggl/super-pocket
    Copyright © 2025 Dimitri Gaggioli
    Licensed under the MIT License
 
 For Documentation
 ~~~~~~~~~~~~~~~~~
 
-When referencing Pocket in documentation:
+When referencing Super Pocket in documentation:
 
-* Link to the repository: https://github.com/dim-gggl/pocket
-* Link to the documentation: https://pocket.readthedocs.io/
+* Link to the repository: https://github.com/dim-gggl/super-pocket
+* Link to the documentation: https://super-pocket.readthedocs.io/
 * Mention the MIT License
 
 Contributing
 ------------
 
-By contributing to Pocket, you agree that your contributions will be
+By contributing to Super Pocket, you agree that your contributions will be
 licensed under the MIT License.
 
 See :doc:`contributing` for more information.

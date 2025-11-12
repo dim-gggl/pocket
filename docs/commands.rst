@@ -1,7 +1,7 @@
 Commands Reference
 ==================
 
-Complete reference for all Pocket CLI commands.
+Complete reference for all Super Pocket CLI commands.
 
 Global Options
 --------------
@@ -434,7 +434,7 @@ Combining with Other Tools
 Exit Codes
 ----------
 
-Pocket commands use standard Unix exit codes:
+Super Pocket commands use standard Unix exit codes:
 
 * ``0`` - Success
 * ``1`` - General error
@@ -444,7 +444,7 @@ Pocket commands use standard Unix exit codes:
 Environment Variables
 ---------------------
 
-Currently, Pocket does not use environment variables for configuration. This may be added in future versions.
+Currently, Super Pocket does not use environment variables for configuration. This may be added in future versions.
 
 See Also
 --------
@@ -452,4 +452,4 @@ See Also
 * :doc:`quickstart` - Getting started guide
 * :doc:`templates` - Templates and cheatsheets details
 * :doc:`api` - API documentation
-* :doc:`contributing` - Contributing to Pocket
+* :doc:`contributing` - Contributing to Super Pocket

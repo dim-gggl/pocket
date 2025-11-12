@@ -1,5 +1,5 @@
-Pocket Documentation
-====================
+Super Pocket Documentation
+==========================
 
 .. image:: https://img.shields.io/badge/version-1.0.1-blue.svg
    :alt: Version 1.0.1
@@ -10,8 +10,8 @@ Pocket Documentation
 .. image:: https://img.shields.io/badge/license-MIT-green.svg
    :alt: MIT License
 
-**Pocket** is a comprehensive collection of developer productivity tools that streamline your development workflow.
-From beautiful markdown rendering to project exporters, agent templates, and cheatsheets management - Pocket brings
+**Super Pocket** is a comprehensive collection of developer productivity tools that streamline your development workflow.
+From beautiful markdown rendering to project exporters, agent templates, and cheatsheets management - Super Pocket brings
 essential developer utilities into a single, unified CLI interface.
 
 Features
@@ -41,11 +41,11 @@ Features
 Quick Start
 -----------
 
-Install Pocket:
+Install Super Pocket:
 
 .. code-block:: bash
 
-   pip install pocket
+   pip install super-pocket
 
 Render a markdown file:
 
@@ -59,10 +59,10 @@ Export your project:
 
    pocket project to-file -p . -o project.md
 
-Why Pocket?
------------
+Why Super Pocket?
+-----------------
 
-Pocket consolidates common developer tools into a single package, providing:
+Super Pocket consolidates common developer tools into a single package, providing:
 
 - **Consistency**: Unified CLI interface across all tools
 - **Productivity**: Quick access to frequently-used utilities

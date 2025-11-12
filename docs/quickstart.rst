@@ -1,7 +1,7 @@
 Quick Start Guide
 =================
 
-This guide will help you get started with Pocket's main features.
+This guide will help you get started with Super Pocket's main features.
 
 Your First Command
 ------------------
@@ -17,7 +17,7 @@ You should see the main help menu with all available commands.
 Markdown Rendering
 ------------------
 
-Pocket can beautifully render Markdown files directly in your terminal with syntax highlighting
+Super Pocket can beautifully render Markdown files directly in your terminal with syntax highlighting
 and rich formatting.
 
 Basic Usage
@@ -60,7 +60,7 @@ Given this markdown file:
        print("Hello, World!")
    ```
 
-Pocket will render it with beautiful formatting and colors in your terminal.
+Super Pocket will render it with beautiful formatting and colors in your terminal.
 
 Project Export
 --------------
@@ -102,7 +102,7 @@ The exported file will contain:
 Agent Templates & Cheatsheets
 ------------------------------
 
-Pocket includes a collection of AI agent templates and development cheatsheets.
+Super Pocket includes a collection of AI agent templates and development cheatsheets.
 
 Listing Available Items
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -281,7 +281,7 @@ Tips and Tricks
 Combining Commands
 ~~~~~~~~~~~~~~~~~~
 
-Use shell pipes and redirection with Pocket commands:
+Use shell pipes and redirection with Super Pocket commands:
 
 .. code-block:: bash
 
@@ -322,7 +322,7 @@ Auto-render on file changes:
 Environment Variables
 ~~~~~~~~~~~~~~~~~~~~~
 
-Customize Pocket behavior (if supported in future versions):
+Customize Super Pocket behavior (if supported in future versions):
 
 .. code-block:: bash
 
@@ -335,7 +335,7 @@ Next Steps
 * :doc:`commands` - Detailed command reference
 * :doc:`templates` - Learn more about templates and cheatsheets
 * :doc:`api` - API documentation for programmatic use
-* :doc:`contributing` - Contribute to Pocket
+* :doc:`contributing` - Contribute to Super Pocket
 
 Getting Help
 ------------

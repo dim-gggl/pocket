@@ -1,7 +1,7 @@
-Contributing to Pocket
-======================
+Contributing to Super Pocket
+============================
 
-Thank you for your interest in contributing to Pocket! This guide will help you get started.
+Thank you for your interest in contributing to Super Pocket! This guide will help you get started.
 
 Code of Conduct
 ---------------
@@ -24,8 +24,8 @@ Setting Up Development Environment
    .. code-block:: bash
 
       # Fork the repository on GitHub first
-      git clone https://github.com/YOUR-USERNAME/pocket.git
-      cd pocket
+      git clone https://github.com/YOUR-USERNAME/super-pocket.git
+      cd super-pocket
 
 2. **Create Virtual Environment:**
 
@@ -107,7 +107,7 @@ Example bug report:
    **Environment**
    - OS: macOS 13.4
    - Python: 3.11.4
-   - Pocket: 1.0.1
+   - Super Pocket: 1.0.1
 
    **Error Message**
    ```
@@ -151,7 +151,7 @@ Contributing Code
 Code Style
 ~~~~~~~~~~
 
-Pocket follows PEP 8 with these tools:
+Super Pocket follows PEP 8 with these tools:
 
 * **black** - Code formatting
 * **ruff** - Linting
@@ -526,7 +526,7 @@ Thank You!
 ----------
 
 Every contribution, no matter how small, is valuable and appreciated.
-Thank you for helping make Pocket better!
+Thank you for helping make Super Pocket better!
 
 See Also
 --------

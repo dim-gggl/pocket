@@ -1,7 +1,7 @@
 Templates & Cheatsheets
 =======================
 
-Pocket includes a curated collection of AI agent templates and development cheatsheets
+Super Pocket includes a curated collection of AI agent templates and development cheatsheets
 to boost your productivity.
 
 Overview
@@ -306,14 +306,14 @@ Template Structure
    ## Best Practices
    Guidelines and recommendations.
 
-Adding to Pocket
-~~~~~~~~~~~~~~~~
+Adding to Super Pocket
+~~~~~~~~~~~~~~~~~~~~~~
 
-To add templates to Pocket's collection:
+To add templates to Super Pocket's collection:
 
 1. Create your template following the structure above
 2. Test it thoroughly in real projects
-3. Submit a pull request to the Pocket repository
+3. Submit a pull request to the Super Pocket repository
 4. Include documentation and examples
 
 See :doc:`contributing` for details on contributing templates.

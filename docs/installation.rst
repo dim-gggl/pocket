@@ -1,7 +1,7 @@
 Installation
 ============
 
-Pocket supports multiple installation methods to suit your workflow.
+Super Pocket supports multiple installation methods to suit your workflow.
 
 Requirements
 ------------
@@ -16,27 +16,27 @@ Installation Methods
 Using pip (Standard)
 ~~~~~~~~~~~~~~~~~~~~
 
-The simplest way to install Pocket is using pip:
+The simplest way to install Super Pocket is using pip:
 
 .. code-block:: bash
 
-   pip install pocket
+   pip install super-pocket
 
 To install with optional dependencies:
 
 .. code-block:: bash
 
    # Install with PDF support
-   pip install pocket[pdf]
+   pip install "super-pocket[pdf]"
 
    # Install with web utilities
-   pip install pocket[web]
+   pip install "super-pocket[web]"
 
    # Install with all optional features
-   pip install pocket[all]
+   pip install "super-pocket[all]"
 
    # Install with development dependencies
-   pip install pocket[dev]
+   pip install "super-pocket[dev]"
 
 Using uv (Recommended)
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -48,22 +48,22 @@ Using uv (Recommended)
    # Install uv if you haven't already
    curl -LsSf https://astral.sh/uv/install.sh | sh
 
-   # Install pocket
-   uv pip install pocket
+   # Install Super Pocket
+   uv pip install super-pocket
 
    # Or install with all features
-   uv pip install pocket[all]
+   uv pip install "super-pocket[all]"
 
 From Source
 ~~~~~~~~~~~
 
-To install Pocket from source for development:
+To install Super Pocket from source for development:
 
 .. code-block:: bash
 
    # Clone the repository
-   git clone https://github.com/your-username/pocket.git
-   cd pocket
+   git clone https://github.com/your-username/super-pocket.git
+   cd super-pocket
 
    # Create and activate virtual environment
    python -m venv .venv
@@ -81,8 +81,8 @@ Using uv for Development
 .. code-block:: bash
 
    # Clone the repository
-   git clone https://github.com/your-username/pocket.git
-   cd pocket
+   git clone https://github.com/your-username/super-pocket.git
+   cd super-pocket
 
    # Install dependencies with uv
    uv sync
@@ -96,7 +96,7 @@ Using uv for Development
 Optional Dependencies
 ---------------------
 
-Pocket has several optional feature sets:
+Super Pocket has several optional feature sets:
 
 PDF Features (``pocket[pdf]``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,7 +124,7 @@ Required for web utilities like favicon generation:
 Development Dependencies (``pocket[dev]``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Required for contributing to Pocket:
+Required for contributing to Super Pocket:
 
 * ``pytest>=7.0.0`` - Testing framework
 * ``pytest-cov>=3.0.0`` - Coverage plugin
@@ -147,7 +147,7 @@ Install everything except development dependencies:
 Verifying Installation
 ----------------------
 
-After installation, verify that Pocket is correctly installed:
+After installation, verify that Super Pocket is correctly installed:
 
 .. code-block:: bash
 
@@ -158,7 +158,7 @@ After installation, verify that Pocket is correctly installed:
    pocket --help
 
    # Test markdown rendering
-   echo "# Hello Pocket" > test.md
+   echo "# Hello Super Pocket" > test.md
    pocket markdown render test.md
 
 You should see:
@@ -169,7 +169,7 @@ You should see:
 
    Usage: pocket [OPTIONS] COMMAND [ARGS]...
 
-     Pocket - Developer productivity tools collection
+     Super Pocket - Developer productivity tools collection
 
    Options:
      --version  Show the version and exit.
@@ -201,8 +201,8 @@ Using venv
    # Activate on Windows
    .venv\Scripts\activate
 
-   # Install pocket
-   pip install pocket
+   # Install Super Pocket
+   pip install super-pocket
 
 Using conda
 ~~~~~~~~~~~
@@ -210,13 +210,13 @@ Using conda
 .. code-block:: bash
 
    # Create conda environment
-   conda create -n pocket python=3.11
+   conda create -n super-pocket python=3.11
 
    # Activate environment
-   conda activate pocket
+   conda activate super-pocket
 
-   # Install pocket
-   pip install pocket
+   # Install Super Pocket
+   pip install super-pocket
 
 Troubleshooting
 ---------------
@@ -238,21 +238,21 @@ If you encounter permission errors during installation:
 .. code-block:: bash
 
    # Use --user flag
-   pip install --user pocket
+   pip install --user super-pocket
 
    # Or use a virtual environment (recommended)
    python -m venv .venv
    source .venv/bin/activate
-   pip install pocket
+   pip install super-pocket
 
 Import Errors
 ~~~~~~~~~~~~~
 
-If you get import errors when running Pocket:
+If you get import errors when running Super Pocket:
 
 1. Ensure you're using Python 3.11 or higher: ``python --version``
-2. Reinstall with ``pip install --force-reinstall pocket``
-3. Check for conflicting packages: ``pip list | grep pocket``
+2. Reinstall with ``pip install --force-reinstall super-pocket``
+3. Check for conflicting packages: ``pip list | grep super-pocket``
 
 Optional Dependencies Missing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -262,19 +262,19 @@ If PDF or web features don't work:
 .. code-block:: bash
 
    # Install missing dependencies
-   pip install pocket[all]
+   pip install "super-pocket[all]"
 
    # Or install specific feature set
-   pip install pocket[pdf] pocket[web]
+   pip install "super-pocket[pdf]" "super-pocket[web]"
 
 Next Steps
 ----------
 
-Now that Pocket is installed, head over to the :doc:`quickstart` guide to learn how to use it!
+Now that Super Pocket is installed, head over to the :doc:`quickstart` guide to learn how to use it!
 
 See Also
 --------
 
 * :doc:`quickstart` - Quick start guide
 * :doc:`commands` - Complete command reference
-* :doc:`contributing` - Contributing to Pocket
+* :doc:`contributing` - Contributing to Super Pocket

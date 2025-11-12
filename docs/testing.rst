@@ -1,12 +1,12 @@
 Testing Guide
 =============
 
-Comprehensive guide to testing Pocket and writing tests for contributions.
+Comprehensive guide to testing Super Pocket and writing tests for contributions.
 
 Testing Philosophy
 ------------------
 
-Pocket follows these testing principles:
+Super Pocket follows these testing principles:
 
 * **Comprehensive Coverage**: Aim for >80% code coverage
 * **Fast Execution**: Tests should run quickly

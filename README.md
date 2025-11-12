@@ -1,4 +1,4 @@
-# Pocket
+# Super Pocket
 
 [![Documentation Status](https://readthedocs.org/projects/pocket/badge/?version=latest)](https://pocket.readthedocs.io/en/latest/?badge=latest)
 [![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -6,7 +6,7 @@
 
 A collection of developer productivity tools including markdown rendering, project exporters, agent templates, and cheatsheets management.
 
-**[📚 Read the Documentation](https://pocket.readthedocs.io/)** | [🚀 Quick Start](#quick-start) | [💡 Features](#features)
+**[📚 Read the Documentation](https://pocketdocs.readthedocs.io/en/latest/)** | [🚀 Quick Start](#quick-start) | [💡 Features](#features)
 
 ## Features
 

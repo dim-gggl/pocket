@@ -1,6 +1,6 @@
 # - Agent templates and cheat sheets management
 """
-Pocket - A collection of developer tools.
+Super Pocket - A collection of developer tools.
 
 This package provides various utilities for developers including:
 - Markdown rendering and conversion

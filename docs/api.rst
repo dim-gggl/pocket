@@ -1,10 +1,10 @@
 API Reference
 =============
 
-Complete API documentation for Pocket modules.
+Complete API documentation for Super Pocket modules.
 
 This page provides detailed API documentation for all public modules, classes, and functions
-in Pocket. Use this as a reference when using Pocket programmatically or extending its functionality.
+in Super Pocket. Use this as a reference when using Super Pocket programmatically or extending its functionality.
 
 Core Module
 -----------
@@ -142,7 +142,7 @@ Using the API
 Programmatic Usage
 ~~~~~~~~~~~~~~~~~~
 
-You can use Pocket's modules programmatically in your Python code:
+You can use Super Pocket's modules (imported via the ``pocket`` package) programmatically in your Python code:
 
 Markdown Rendering Example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -222,7 +222,7 @@ Favicon Generation Example
 Error Handling
 ~~~~~~~~~~~~~~
 
-All Pocket functions raise appropriate exceptions on errors:
+All Super Pocket functions raise appropriate exceptions on errors:
 
 .. code-block:: python
 
@@ -246,7 +246,7 @@ Common Exceptions
 Type Hints
 ~~~~~~~~~~
 
-Pocket uses type hints throughout the codebase for better IDE support:
+Super Pocket uses type hints throughout the codebase for better IDE support:
 
 .. code-block:: python
 
@@ -279,8 +279,8 @@ Some modules accept configuration options:
 
    renderer.render('document.md')
 
-Extending Pocket
-----------------
+Extending Super Pocket
+----------------------
 
 Custom Renderers
 ~~~~~~~~~~~~~~~~
@@ -331,7 +331,7 @@ Version Compatibility
 Semantic Versioning
 ~~~~~~~~~~~~~~~~~~~
 
-Pocket follows semantic versioning:
+Super Pocket follows semantic versioning:
 
 * **Major** (X.0.0): Breaking API changes
 * **Minor** (1.X.0): New features, backward compatible

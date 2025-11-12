@@ -1,9 +1,9 @@
 Module Index
 ============
 
-Complete index of all Pocket modules.
+Complete index of all Super Pocket modules.
 
-This page provides an overview of Pocket's module structure and links to detailed
+This page provides an overview of Super Pocket's module structure and links to detailed
 API documentation for each module.
 
 Package Structure
