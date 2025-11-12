@@ -5,14 +5,21 @@ Pocket - Unified CLI entry point.
 This module provides a unified command-line interface for all Pocket
 functionalities, organized into logical subcommands.
 """
-
 import click
 from rich.console import Console
-
-from pocket import __version__
-from pocket.web.job_search import main as job_search
-from pocket.markdown.renderer import markd
 from pathlib import Path
+
+from super_pocket import __version__
+from super_pocket.web.job_search import main as job_search
+from super_pocket.markdown.renderer import markd
+from super_pocket.project.to_file import create_codebase_markdown
+from super_pocket.templates_and_cheatsheets.cli import list_items
+from super_pocket.templates_and_cheatsheets.cli import view_item
+from super_pocket.templates_and_cheatsheets.cli import copy_item
+from super_pocket.templates_and_cheatsheets.cli import init_agents
+from super_pocket.pdf.converter import pdf_convert
+from super_pocket.web.favicon import favicon_convert
+
 
 console = Console()
 
@@ -110,7 +117,6 @@ def project_to_file(path: str, output: str, exclude: str):
         pocket project to-file -p ./my-project -o export.md
         pocket project to-file -e "node_modules,dist,build"
     """
-    from pocket.project.to_file import create_codebase_markdown
 
     create_codebase_markdown(path, output, exclude)
 
@@ -144,7 +150,6 @@ def templates_list(type: str):
         pocket templates list --type templates
         pocket templates list -t cheatsheets
     """
-    from pocket.templates_and_cheatsheets.cli import list_items
 
     ctx = click.Context(list_items)
     ctx.invoke(list_items, type=type)
@@ -172,7 +177,6 @@ def templates_view(name: str, type: str):
         pocket templates view unit_tests_agent
         pocket templates view SQL -t cheatsheet
     """
-    from pocket.templates_and_cheatsheets.cli import view_item
 
     ctx = click.Context(view_item)
     ctx.invoke(view_item, name=name, type=type)
@@ -212,9 +216,6 @@ def templates_copy(name: str, output: str, type: str, force: bool):
         pocket templates copy unit_tests_agent -o .agents/
         pocket templates copy SQL -o docs/cheatsheets/
     """
-    from pocket.templates_and_cheatsheets.cli import copy_item
-    from pathlib import Path
-
     output_path = Path(output) if output else None
 
     ctx = click.Context(copy_item)
@@ -240,10 +241,7 @@ def templates_init(output: str):
     Examples:
         pocket templates init
         pocket templates init -o ./agents/
-    """
-    from pocket.templates_and_cheatsheets.cli import init_agents
-    from pathlib import Path
-
+    """     
     output_path = Path(output) if output else Path.cwd() / ".AGENTS"
 
     ctx = click.Context(init_agents)
@@ -279,9 +277,6 @@ def pdf_convert_cmd(input_file: str, output: str):
         pocket pdf convert document.txt
         pocket pdf convert README.md -o output.pdf
     """
-    from pocket.pdf.converter import pdf_convert
-    from pathlib import Path
-
     output_path = Path(output) if output else None
 
     ctx = click.Context(pdf_convert)
@@ -304,9 +299,9 @@ def web_group():
 @click.option("-d", "--date_posted", type=str, default="month", help="Date posted to search for. Possible values: all, today, 3days, week, month")
 @click.option("-t", "--employment_types", type=str, default="FULLTIME", help="Employment types to search for. Possible values: FULLTIME, CONTRACTOR, PARTTIME, INTERN")
 @click.option("-r", "--job_requirements", type=str, default="no_experience", help="Job requirements to search for")
-@click.option("--work-from-home", is_flag=True, default=False, help="Search for jobs that allow working from home")
+@click.option("--work_from_home", is_flag=True, default=False, help="Search for jobs that allow working from home")
 @click.option("-o", "--output", type=str, default="jobs.json", help="Output file name")
-def web_job_search_cmd(query: str, page: int, num_pages: int, country: str, language: str, date_posted: str, employment_types: str, job_requirements: str, output: str):
+def web_job_search_cmd(query: str, page: int, num_pages: int, country: str, language: str, date_posted: str, employment_types: str, job_requirements: str, work_from_home: bool, output: str):
     """
     Search for jobs using the JSearch API.
 
@@ -364,9 +359,6 @@ def web_favicon_cmd(input_file: str, output: str, sizes: str):
         pocket web favicon logo.png -o custom-favicon.ico
         pocket web favicon logo.png --sizes "64x64,32x32"
     """
-    from pocket.web.favicon import favicon_convert
-    from pathlib import Path
-
     output_path = Path(output) if output else None
 
     ctx = click.Context(favicon_convert)

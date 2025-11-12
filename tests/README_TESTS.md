@@ -126,7 +126,7 @@ Tests for example module.
 
 import pytest
 from pathlib import Path
-from pocket.example import example_function
+from super_pocket.example import example_function
 
 
 def test_example_function_success():

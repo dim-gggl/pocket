@@ -38,7 +38,7 @@ markd README.md
 
 ```python
 from pathlib import Path
-from pocket.markdown.renderer import read_markdown_file
+from super_pocket.markdown.renderer import read_markdown_file
 
 file_path = Path("README.md")
 content = read_markdown_file(file_path)
@@ -47,7 +47,7 @@ content = read_markdown_file(file_path)
 ### Rendering Markdown
 
 ```python
-from pocket.markdown.renderer import render_markdown
+from super_pocket.markdown.renderer import render_markdown
 from rich.console import Console
 
 console = Console()

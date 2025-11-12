@@ -127,7 +127,7 @@ Test File Structure
    """
 
    import pytest
-   from pocket.markdown.renderer import render_markdown
+   from super_pocket.markdown.renderer import render_markdown
 
 
    class TestMarkdownRenderer:
@@ -306,7 +306,7 @@ Mocking Click Commands
 .. code-block:: python
 
    from click.testing import CliRunner
-   from pocket.cli import cli
+   from super_pocket.cli import cli
 
 
    def test_cli_markdown_render():

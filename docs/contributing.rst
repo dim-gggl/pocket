@@ -232,7 +232,7 @@ All new features and bug fixes need tests:
 .. code-block:: python
 
    import pytest
-   from pocket.markdown.renderer import render_markdown
+   from super_pocket.markdown.renderer import render_markdown
 
    def test_render_basic_markdown():
        """Test basic markdown rendering."""

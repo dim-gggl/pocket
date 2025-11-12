@@ -5,7 +5,7 @@ Tests for the main CLI module.
 import pytest
 from pathlib import Path
 from click.testing import CliRunner
-from pocket.cli import cli, main
+from super_pocket.cli import cli, main
 
 
 @pytest.fixture
@@ -89,7 +89,7 @@ def test_cli_templates_list_type(runner: CliRunner):
 def test_cli_templates_view(runner: CliRunner):
     """Test templates view command."""
     # Try to view an actual template if any exist
-    from pocket.templates_and_cheatsheets.cli import get_available_items
+    from super_pocket.templates_and_cheatsheets.cli import get_available_items
     
     templates = get_available_items("templates")
     if templates:
@@ -109,7 +109,7 @@ def test_cli_templates_view_nonexistent(runner: CliRunner):
 
 def test_cli_templates_copy(runner: CliRunner, temp_dir):
     """Test templates copy command."""
-    from pocket.templates_and_cheatsheets.cli import get_available_items
+    from super_pocket.templates_and_cheatsheets.cli import get_available_items
     
     templates = get_available_items("templates")
     if templates:

@@ -106,7 +106,7 @@ def save_jobs_to_json(jobs: dict, filename: str):
 @click.option("-r", "--job_requirements", type=str, 
               default="no_experience", 
               help="Job requirements to search for")
-@click.option("--work-from-home", is_flag=True, 
+@click.option("--work_from_home", is_flag=True, 
               default=False, 
               help="Search for jobs that allow working from home")
 @click.option("-o", "--output", type=str, 
@@ -114,13 +114,13 @@ def save_jobs_to_json(jobs: dict, filename: str):
 def main(query: str,
          page: int,
          num_pages: int,
-         country: str,
-         language: str,
-         date_posted: str,
-         employment_types: str,
-         job_requirements: str,
-         work_from_home: bool,
-         output: str):
+         country: str = "fr",
+         language: str = "fr",
+         date_posted: str = "month",
+         employment_types: str = "FULLTIME",
+         job_requirements: str = "no_experience",
+         work_from_home: bool = False,
+         output: str = "jobs.json"):
     """CLI command to search for job postings and save the results.
 
     This command allows searching for job postings via the JSearch API

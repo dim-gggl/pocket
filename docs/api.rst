@@ -149,7 +149,7 @@ Markdown Rendering Example
 
 .. code-block:: python
 
-   from pocket.markdown.renderer import render_markdown
+   from super_pocket.markdown.renderer import render_markdown
 
    # Render a markdown file
    render_markdown('README.md')
@@ -163,7 +163,7 @@ Project Export Example
 
 .. code-block:: python
 
-   from pocket.project.to_file import export_project
+   from super_pocket.project.to_file import export_project
 
    # Export a project
    export_project(
@@ -177,7 +177,7 @@ Templates Management Example
 
 .. code-block:: python
 
-   from pocket.templates_and_cheatsheets.cli import (
+   from super_pocket.templates_and_cheatsheets.cli import (
        list_templates,
        view_template,
        copy_template
@@ -197,7 +197,7 @@ PDF Conversion Example
 
 .. code-block:: python
 
-   from pocket.pdf.converter import convert_to_pdf
+   from super_pocket.pdf.converter import convert_to_pdf
 
    # Convert markdown to PDF
    convert_to_pdf(
@@ -210,7 +210,7 @@ Favicon Generation Example
 
 .. code-block:: python
 
-   from pocket.web.favicon import generate_favicon
+   from super_pocket.web.favicon import generate_favicon
 
    # Generate favicon from image
    generate_favicon(
@@ -226,7 +226,7 @@ All Super Pocket functions raise appropriate exceptions on errors:
 
 .. code-block:: python
 
-   from pocket.markdown.renderer import render_markdown
+   from super_pocket.markdown.renderer import render_markdown
 
    try:
        render_markdown('nonexistent.md')
@@ -268,7 +268,7 @@ Some modules accept configuration options:
 
 .. code-block:: python
 
-   from pocket.markdown.renderer import MarkdownRenderer
+   from super_pocket.markdown.renderer import MarkdownRenderer
 
    # Create custom renderer
    renderer = MarkdownRenderer(
@@ -289,7 +289,7 @@ Extend the markdown renderer:
 
 .. code-block:: python
 
-   from pocket.markdown.renderer import MarkdownRenderer
+   from super_pocket.markdown.renderer import MarkdownRenderer
 
    class CustomRenderer(MarkdownRenderer):
        def render_heading(self, text: str, level: int) -> str:
@@ -303,7 +303,7 @@ Create custom project exporters:
 
 .. code-block:: python
 
-   from pocket.project.to_file import ProjectExporter
+   from super_pocket.project.to_file import ProjectExporter
 
    class JSONExporter(ProjectExporter):
        def export(self, project_path: str) -> dict:

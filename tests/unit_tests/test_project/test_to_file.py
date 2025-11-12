@@ -4,7 +4,7 @@ Tests for project to_file module.
 
 import pytest
 from pathlib import Path
-from pocket.project.to_file import (
+from super_pocket.project.to_file import (
     get_language_identifier,
     generate_tree,
     create_codebase_markdown

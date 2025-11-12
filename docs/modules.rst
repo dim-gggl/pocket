@@ -228,13 +228,13 @@ Importing Modules
    import pocket
 
    # Import specific modules
-   from pocket.markdown import renderer
-   from pocket.project import to_file
-   from pocket.templates_and_cheatsheets import cli as templates_cli
+   from super_pocket.markdown import renderer
+   from super_pocket.project import to_file
+   from super_pocket.templates_and_cheatsheets import cli as templates_cli
 
    # Import specific functions
-   from pocket.markdown.renderer import render_markdown
-   from pocket.project.to_file import export_project
+   from super_pocket.markdown.renderer import render_markdown
+   from super_pocket.project.to_file import export_project
 
 Using Submodules
 ~~~~~~~~~~~~~~~~
@@ -242,15 +242,15 @@ Using Submodules
 .. code-block:: python
 
    # Access markdown functionality
-   from pocket import markdown
+   from super_pocket import markdown
    markdown.renderer.render_markdown('README.md')
 
    # Access project tools
-   from pocket import project
+   from super_pocket import project
    project.to_file.export_project('.')
 
    # Access templates
-   from pocket import templates_and_cheatsheets
+   from super_pocket import templates_and_cheatsheets
    templates_and_cheatsheets.cli.list_templates()
 
 Module Guidelines
@@ -273,13 +273,13 @@ Preferred import styles:
 .. code-block:: python
 
    # Good: Specific imports
-   from pocket.markdown.renderer import render_markdown
+   from super_pocket.markdown.renderer import render_markdown
 
    # Good: Module import
-   from pocket import markdown
+   from super_pocket import markdown
 
    # Avoid: Star imports
-   from pocket.markdown import *  # Don't do this
+   from super_pocket.markdown import *  # Don't do this
 
 Type Hints
 ~~~~~~~~~~
@@ -346,7 +346,7 @@ Module Docstrings
    Example:
        Basic usage example::
 
-           from pocket.module import function
+           from super_pocket.module import function
            result = function()
 
    Attributes:

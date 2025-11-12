@@ -6,7 +6,7 @@ import pytest
 import shutil
 from pathlib import Path
 from click.testing import CliRunner
-from pocket.templates_and_cheatsheets.cli import (
+from super_pocket.templates_and_cheatsheets.cli import (
     templates_cli,
     get_available_items,
     list_items,
@@ -14,7 +14,7 @@ from pocket.templates_and_cheatsheets.cli import (
     copy_item,
     init_agents
 )
-from pocket.templates_and_cheatsheets import TEMPLATES_DIR, CHEATSHEETS_DIR
+from super_pocket.templates_and_cheatsheets import TEMPLATES_DIR, CHEATSHEETS_DIR
 
 
 def test_get_available_items_templates():

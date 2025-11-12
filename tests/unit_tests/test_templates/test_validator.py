@@ -4,7 +4,7 @@ Tests for template validator module.
 
 import pytest
 from pathlib import Path
-from pocket.templates_and_cheatsheets.validator import (
+from super_pocket.templates_and_cheatsheets.validator import (
     validate_markdown_syntax,
     validate_agent_template,
     validate_template_file,
