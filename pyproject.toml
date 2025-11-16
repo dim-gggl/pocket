@@ -5,7 +5,7 @@ description = "A collection of developer tools including markdown rendering, pro
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [
-    {name = "dim-gggl"}
+    {name = "Dimitri Gaggioli", email = "dimitri.gaggioli@gmail.com"}
 ]
 keywords = ["developer-tools", "cli", "markdown", "productivity", "agents", "templates", "job", "assistant"]
 classifiers = [
@@ -26,23 +26,22 @@ dependencies = [
     "rich>=14.1.0",
     "sphinx>=8.2.3",
     "sphinx-rtd-theme>=3.0.2",
-
     # Sphinx extensions
     "sphinx-autobuild>=2024.10.3",
     "sphinx-copybutton>=0.5.2",
-
     # Theme dependencies
     "docutils>=0.21.2",
-
     # Markdown support (optional)
     "myst-parser>=4.0.0",
-
     # Additional utilities
     "sphinx-tabs>=3.4.7",
     "sphinxcontrib-httpdomain>=1.8.1",
-
     # Code documentation
-    "sphinx-autodoc-typehints>=2.5.0"
+    "sphinx-autodoc-typehints>=2.5.0",
+    "httpx>=0.28.1",
+    "uvicorn>=0.38.0",
+    "asyncio>=4.0.0",
+    "fastapi>=0.121.2",
 ]
 
 [project.optional-dependencies]
@@ -66,11 +65,12 @@ all = [
 ]
 
 [project.scripts]
-pocket = "pocket.cli:main"
-markd = "pocket.markdown.renderer:markd"
-'project to-file' = "pocket.project.to_file:main"
-conv-to-pdf = "pocket.pdf.converter:main"
-flavicon = "pocket.web.favicon:main"
+pocket = "super_pocket.cli:cli"
+markd = "super_pocket.markdown.renderer:markd"
+proj-to-file = "super_pocket.project.to_file:main"
+req-to-date = "super_pocket.project.req_to_date:req_to_date_cli"
+conv-to-pdf = "super_pocket.pdf.converter:main"
+flavicon = "super_pocket.web.favicon:main"
 
 [build-system]
 requires = ["hatchling"]
